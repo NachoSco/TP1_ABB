@@ -53,4 +53,27 @@ vector_original = vector;
 ---
 
 ## Respuestas a las preguntas teóricas
-Incluír acá las respuestas a las preguntas del enunciado (si aplica).
+
+### Busqueda
+
+<div align="center">
+<img width="70%" src="img/diagrama2.svg">
+</div>
+
+Ahora, vamos a realizar una búsqueda en este árbol para encontrar el número 13.
+
+Comenzamos en el nodo raíz, que contiene el número 4.
+Comparamos el número que estamos buscando (13) con el número en el nodo actual (4).
+Como 13 es mayor que 4, nos movemos al hijo derecho del nodo actual.
+Ahora estamos en el nodo con el número 12.
+Comparamos el número que estamos buscando (13) con el número en el nodo actual (12).
+Como 13 es mayor que 12, nos movemos al hijo derecho del nodo actual.
+Ahora estamos en el nodo con el número 15.
+Comparamos el número que estamos buscando (13) con el número en el nodo actual (15).
+Como 13 es menor que 15, nos movemos al hijo izquierdo del nodo actual.
+Ahora estamos en el nodo con el número 13.
+Comparamos el número que estamos buscando (13) con el número en el nodo actual (13).
+Hemos encontrado el número que estábamos buscando.
+Entonces, la búsqueda en este árbol binario de búsqueda para el número 13 implicó seguir un camino descendente desde el nodo raíz, tomando decisiones basadas en comparaciones de valores, hasta encontrar el nodo que contenía el valor buscado.
+
+La complejidad de la búsqueda en un ABB es O(h), donde h es la altura del árbol. En este caso, la altura del árbol es relativamente baja porque es un árbol balanceado, por lo que la búsqueda es bastante eficiente.
