@@ -54,6 +54,13 @@ vector_original = vector;
 
 ## Respuestas a las preguntas teóricas
 
+### Árbol Binario (AB):
+
+**Un Árbol Binario** es una estructura de datos jerárquica en forma de árbol en la que cada nodo tiene como máximo dos hijos, denominados hijo izquierdo y hijo derecho. Cada nodo puede contener un elemento de datos y apuntadores a sus hijos. Si un hijo está ausente, el apuntador correspondiente puede ser nulo. Los árboles binarios se utilizan comúnmente en informática para organizar y gestionar datos de manera eficiente, ya que permiten una rápida búsqueda, inserción y eliminación de elementos.
+
+### Árbol Binario de Búsqueda (ABB):
+
+**Un Árbol Binario de Búsqueda (ABB)** es una variante del Árbol Binario en la que se impone una restricción adicional: para cada nodo, todos los elementos en el subárbol izquierdo son menores que el elemento del nodo, y todos los elementos en el subárbol derecho son mayores que el elemento del nodo. Esta propiedad hace que la búsqueda, inserción y eliminación en un ABB sean altamente eficientes, ya que permite realizar operaciones en tiempo logarítmico en promedio. Los ABB se utilizan ampliamente en aplicaciones donde se necesita un acceso rápido a los datos, como en la implementación de diccionarios, bases de datos y algoritmos de búsqueda y ordenamiento.
 
 ### Inserción
 
@@ -89,6 +96,7 @@ En un ABB bien balanceado, la altura del árbol tiende a ser logarítmica en fun
 Sin embargo, si el árbol está desbalanceado, la inserción podría requerir recorrer una cantidad lineal de nodos en el peor de los casos, lo que llevaría a una complejidad de O(n), donde n es el número de nodos en el árbol. Esto podría ocurrir, por ejemplo, si los elementos se insertan en orden ascendente o descendente, lo que daría como resultado un árbol degenerado en una lista enlazada.
 
 En resumen, la complejidad de la inserción en un ABB puede variar dependiendo de la estructura del árbol, pero en promedio es eficiente, con una complejidad de O(log n) en un árbol bien balanceado.
+
 ### Busqueda
 
 <div align="center">
@@ -130,6 +138,7 @@ La complejidad de la búsqueda en un ABB es O(n), donde n es la altura del árbo
 <div align="center">
 <img width="50%" src="img/ABB_eliminacion_hoja.PNG">
 </div>
+
 #### Eliminación nodo con hijos 
 <div align="center">
 <img width="50%" src="img/ABB_eliminacion_nodo_hijos.PNG">
