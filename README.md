@@ -126,7 +126,11 @@ Entonces, la búsqueda en este árbol binario de búsqueda para el número 13 im
 La complejidad de la búsqueda en un ABB es O(n), donde n es la altura del árbol. En este caso, la altura del árbol es relativamente baja porque es un árbol balanceado, por lo que la búsqueda es bastante eficiente.
 
 ### Eliminación
-
+#### Eliminación hoja 
 <div align="center">
-<img width="70%" src="img/ABB_eliminacion.PNG">
+<img width="70%" src="img/ABB_eliminacion_hoja.PNG">
+</div>
+#### Eliminación nodo con hijos 
+<div align="center">
+<img width="70%" src="img/ABB_eliminacion_nodo_hijos.PNG">
 </div>
