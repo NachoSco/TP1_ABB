@@ -139,15 +139,15 @@ La complejidad de la búsqueda en un ABB es O(n), donde n es la altura del árbo
 <img width="50%" src="img/ABB_eliminacion_hoja.PNG">
 </div>
 
-1. **Comenzamos desde la raíz**:  
+**Comenzamos desde la raíz**:  
 
-2. **Búsqueda del nodo 8**:  
+**Búsqueda del nodo 8**:  
    - Buscamos el nodo con el valor 8 en el árbol.
 
-3. **Identificación del nodo 8 como hoja**:  
+**Identificación del nodo 8 como hoja**:  
    - El nodo 8 es una hoja, es decir, no tiene hijos.
 
-4. **Eliminación del nodo 8**:  
+**Eliminación del nodo 8**:  
    - Eliminamos el nodo 8 del árbol.
 
 Así es como se realiza la eliminación de la hoja 8 en el árbol. La eliminación de una hoja en un árbol binario implica simplemente eliminar el nodo hoja del árbol, ajustando los enlaces adecuadamente para mantener la estructura del árbol.
@@ -159,24 +159,24 @@ Eliminar una hoja en un árbol binario de búsqueda es relativamente sencillo, y
 <img width="50%" src="img/ABB_eliminacion_nodo_hijos.PNG">
 </div>
 
-1. **Comenzamos desde la raíz**:  
+**Comenzamos desde la raíz**:  
 
-2. **Búsqueda del nodo con valor 12**:  
+**Búsqueda del nodo con valor 12**:  
    - Buscamos el nodo con el valor 12 en el árbol.
 
-3. **Identificación del nodo 12 con hijos**:  
+**Identificación del nodo 12 con hijos**:  
    - El nodo 12 tiene dos hijos.
 
-4. **Búsqueda del sucesor inmediato**:  
+**Búsqueda del sucesor inmediato**:  
    - Para eliminar un nodo con dos hijos, necesitamos encontrar su sucesor inmediato. El sucesor inmediato es el nodo más pequeño en el subárbol derecho del nodo que estamos eliminando.
 
-5. **Sucesor inmediato del nodo 12**:  
+**Sucesor inmediato del nodo 12**:  
    - El sucesor inmediato del nodo 12 es el nodo con valor 13.
 
-6. **Reemplazo del nodo 12 con su sucesor inmediato 13**:  
+**Reemplazo del nodo 12 con su sucesor inmediato 13**:  
    - Reemplazamos el valor del nodo 12 con el valor del sucesor inmediato, es decir, 13.
 
-7. **Eliminación del nodo 13 del subárbol derecho**:  
+**Eliminación del nodo 13 del subárbol derecho**:  
    - Ahora, eliminamos el nodo 13, que se convierte en la nueva hoja o nodo con un solo hijo.
 
 Así es como se realiza la eliminación del nodo con hijos 12 en el árbol. La eliminación de un nodo con dos hijos en un árbol binario implica encontrar su sucesor inmediato y reemplazar el nodo a eliminar con este sucesor. Luego, se elimina el sucesor inmediato del subárbol derecho, manteniendo así la estructura y la propiedad de orden del árbol.
