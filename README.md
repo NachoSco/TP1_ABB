@@ -54,6 +54,13 @@ vector_original = vector;
 
 ## Respuestas a las preguntas teóricas
 
+
+### Inserción
+
+<div align="center">
+<img width="70%" src="img/ABB_Insercion.PNG">
+</div>
+
 ### Busqueda
 
 <div align="center">
