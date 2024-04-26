@@ -128,5 +128,5 @@ La complejidad de la búsqueda en un ABB es O(n), donde n es la altura del árbo
 ### Eliminación
 
 <div align="center">
-<img width="70%" src="img/ABB_Eliminacion.PNG">
+<img width="70%" src="img/ABB_eliminacion.PNG">
 </div>
