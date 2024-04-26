@@ -58,7 +58,7 @@ vector_original = vector;
 ### Inserción
 
 <div align="center">
-<img width="60%" src="img/ABB_Insercion.PNG">
+<img width="50%" src="img/ABB_Insercion.PNG">
 </div>
 
 ### Busqueda
