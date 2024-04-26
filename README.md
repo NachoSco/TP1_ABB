@@ -84,26 +84,42 @@ vector_original = vector;
   
 Así es como se realiza la inserción del elemento 8 en el ABB. La inserción en un ABB implica encontrar el lugar adecuado para el nuevo elemento siguiendo las comparaciones basadas en el valor de los nodos, y luego insertarlo como un nuevo nodo en la posición correcta del árbol para mantener la propiedad de orden de un ABB.
 
+En un ABB bien balanceado, la altura del árbol tiende a ser logarítmica en función del número de nodos, lo que resulta en una complejidad de inserción de O(log n), donde n es el número de nodos en el árbol. Esto significa que, en promedio, la inserción tomará un tiempo proporcional al logaritmo del número de elementos en el árbol.
+
+Sin embargo, si el árbol está desbalanceado, la inserción podría requerir recorrer una cantidad lineal de nodos en el peor de los casos, lo que llevaría a una complejidad de O(n), donde n es el número de nodos en el árbol. Esto podría ocurrir, por ejemplo, si los elementos se insertan en orden ascendente o descendente, lo que daría como resultado un árbol degenerado en una lista enlazada.
+
+En resumen, la complejidad de la inserción en un ABB puede variar dependiendo de la estructura del árbol, pero en promedio es eficiente, con una complejidad de O(log n) en un árbol bien balanceado.
 ### Busqueda
 
 <div align="center">
 <img width="70%" src="img/ABB_Busqueda.PNG">
 </div>
 
-Ahora, vamos a realizar una búsqueda en este árbol para encontrar el número 13.
+**Ahora, vamos a realizar una búsqueda en este árbol para encontrar el número 13:**
 
-1. Comenzamos en el nodo raíz, que contiene el número 4.
-2. Comparamos el número que estamos buscando (13) con el número en el nodo actual (4).
-   - Como 13 es mayor que 4, nos movemos al hijo derecho del nodo actual.
-3. Ahora estamos en el nodo con el número 12.
-4. Comparamos el número que estamos buscando (13) con el número en el nodo actual (12).
-   - Como 13 es mayor que 12, nos movemos al hijo derecho del nodo actual.
-5. Ahora estamos en el nodo con el número 15.
-6. Comparamos el número que estamos buscando (13) con el número en el nodo actual (15).
-   - Como 13 es menor que 15, nos movemos al hijo izquierdo del nodo actual.
-7. Ahora estamos en el nodo con el número 13.
-8. Comparamos el número que estamos buscando (13) con el número en el nodo actual (13).
-   - Hemos encontrado el número que estábamos buscando.
+**Comparación con el nodo raíz (4):**
+- Empezamos comparando el número buscado (13) con el nodo raíz (4).
+- Como 13 es mayor que 4, nos movemos al hijo derecho del nodo raíz.
+
+**Movimiento al subárbol derecho:**
+- Ahora estamos en el nodo con el número 12.
+
+**Comparación con el nodo actual (12):**
+- Comparamos el número buscado (13) con el número en el nodo actual (12).
+- Como 13 es mayor que 12, nos movemos al hijo derecho del nodo actual.
+
+**Movimiento al subárbol derecho:**
+- Ahora estamos en el nodo con el número 15.
+
+**Comparación con el nodo actual (15):**
+- Comparamos el número buscado (13) con el número en el nodo actual (15).
+- Como 13 es menor que 15, nos movemos al hijo izquierdo del nodo actual.
+
+**Movimiento al subárbol izquierdo:**
+- Ahora estamos en el nodo con el número 13.
+
+**Comparación con el nodo actual (13):**
+- Hemos encontrado el número que estábamos buscando.
 
 Entonces, la búsqueda en este árbol binario de búsqueda para el número 13 implicó seguir un camino descendente desde el nodo raíz, tomando decisiones basadas en comparaciones de valores, hasta encontrar el nodo que contenía el valor buscado.
 
