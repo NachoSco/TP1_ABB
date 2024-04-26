@@ -61,6 +61,29 @@ vector_original = vector;
 <img width="50%" src="img/ABB_Insercion.PNG">
 </div>
 
+**Comparación con el nodo raíz (4):**
+- Empezamos comparando el elemento que queremos insertar (8) con el nodo raíz (4).
+- Como 8 es mayor que 4, nos movemos al hijo derecho del nodo raíz.
+
+**Movimiento al subárbol derecho:**
+- Ahora estamos en el nodo con valor 6.
+
+**Comparación con el nodo actual (6):**
+- Comparamos 8 con el valor del nodo actual (6).
+- Como 8 es mayor que 6, nos movemos al hijo derecho del nodo actual.
+
+**Movimiento al subárbol derecho:**
+- Ahora estamos en el nodo con valor 7.
+
+**Comparación con el nodo actual (7):**
+- Comparamos 8 con el valor del nodo actual (7).
+- Como 8 es mayor que 7 y el nodo actual no tiene un hijo derecho, sabemos que debemos insertar el elemento 8 como el hijo derecho de este nodo.
+
+**Inserción del nuevo nodo (8):**
+- Insertamos el elemento 8 como hijo derecho del nodo 7.
+  
+Así es como se realiza la inserción del elemento 8 en el ABB. La inserción en un ABB implica encontrar el lugar adecuado para el nuevo elemento siguiendo las comparaciones basadas en el valor de los nodos, y luego insertarlo como un nuevo nodo en la posición correcta del árbol para mantener la propiedad de orden de un ABB.
+
 ### Busqueda
 
 <div align="center">
