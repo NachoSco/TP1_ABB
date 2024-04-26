@@ -57,7 +57,7 @@ vector_original = vector;
 ### Busqueda
 
 <div align="center">
-<img width="70%" src="img/diagrama2.svg">
+<img width="70%" src="img/ABB_Busqueda">
 </div>
 
 Ahora, vamos a realizar una búsqueda en este árbol para encontrar el número 13.
