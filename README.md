@@ -185,6 +185,6 @@ Eliminar un nodo con dos hijos es un poco más complejo. Implica encontrar y ree
 
 ### Grafico de memoria
 <div align="center">
-<img width="70%" src="img/memoria.png">
+<img width="100%" src="img/memoria.png">
 </div>
 
