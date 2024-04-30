@@ -183,6 +183,8 @@ Así es como se realiza la eliminación del nodo con hijos 12 en el árbol. La e
 
 Eliminar un nodo con dos hijos es un poco más complejo. Implica encontrar y reemplazar el valor del nodo con su sucesor inmediato (el menor valor en el subárbol derecho), y luego eliminar este sucesor. La complejidad también es O(h).
 
-
-
+### Grafico de memoria
+<div align="center">
+<img width="50%" src="img/memoria.png">
+</div>
 
