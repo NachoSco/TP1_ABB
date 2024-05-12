@@ -1,6 +1,6 @@
 # TDA ABB
 
-## Repositorio de (Nombre Apellido) - (Padrón) - (Mail)
+## Repositorio de Nicolas Ignacio Scopel - 111305 - nscopel@fi.uba.ar
 
 - Para compilar:
 
@@ -21,36 +21,53 @@ línea con valgrind
 ---
 ##  Funcionamiento
 
-Explicación de cómo funcionan las estructuras desarrolladas en el TP y el funcionamiento general del mismo.
+Este código implementa un árbol binario de búsqueda (ABB) junto con algunas funciones auxiliares para crear, insertar, buscar, eliminar, recorrer y destruir el árbol. Aquí hay una explicación general del funcionamiento y las estructuras utilizadas:
 
-Aclarar en esta parte todas las decisiones que se tomaron al realizar el TP, cosas que no se aclaren en el enunciado, fragmentos de código que necesiten explicación extra, etc.
+### Estructuras de datos:
 
-Incluír **EN TODOS LOS TPS** los diagramas relevantes al problema (mayormente diagramas de memoria para explicar las estructuras, pero se pueden utilizar otros diagramas si es necesario).
+1. **estructura_vectorial_t**: Esta estructura se utiliza para almacenar un array y su tamaño. Se usa para la implementación de la estructura de pruebas del árbol.
 
-### Por ejemplo:
+2. **nodo_abb_t**: Estructura que representa un nodo en el árbol binario de búsqueda. Contiene un puntero al elemento almacenado en el nodo, así como punteros a sus nodos hijo izquierdo y derecho.
 
-El programa funciona abriendo el archivo pasado como parámetro y leyendolo línea por línea. Por cada línea crea un registro e intenta agregarlo al vector. La función de lectura intenta leer todo el archivo o hasta encontrar el primer error. Devuelve un vector con todos los registros creados.
+3. **abb_t**: Estructura que representa un árbol binario de búsqueda. Contiene un puntero a la función de comparación de elementos, el tamaño del árbol y un puntero a la raíz del árbol.
 
-<div align="center">
-<img width="70%" src="img/diagrama1.svg">
-</div>
+### Funciones principales:
 
-En el archivo `sarasa.c` la función `funcion1` utiliza `realloc` para agrandar la zona de memoria utilizada para conquistar el mundo. El resultado de `realloc` lo guardo en una variable auxiliar para no perder el puntero original en caso de error:
+1. **abb_crear**: Crea un nuevo árbol binario de búsqueda. Toma como argumento una función de comparación de elementos.
 
-```c
-int *vector = realloc(vector_original, (n+1)*sizeof(int));
+2. **abb_insertar**: Inserta un elemento en el árbol manteniendo la propiedad de orden. Utiliza una función auxiliar recursiva para encontrar la posición correcta.
 
-if(vector == NULL)
-    return -1;
-vector_original = vector;
-```
+3. **abb_buscar**: Busca un elemento en el árbol utilizando una función auxiliar recursiva.
 
+4. **abb_quitar**: Busca y elimina un elemento del árbol. Puede eliminar nodos con cero, uno o dos hijos.
 
-<div align="center">
-<img width="70%" src="img/diagrama2.svg">
-</div>
+5. **abb_destruir**: Libera la memoria utilizada por el árbol. Utiliza una función auxiliar recursiva para eliminar todos los nodos del árbol.
 
----
+6. **abb_con_cada_elemento**: Recorre el árbol en un orden específico (inorden, preorden o postorden) y llama a una función dada con cada elemento.
+
+7. **abb_recorrer**: Recorre el árbol en un orden específico (inorden, preorden o postorden) y almacena los elementos en un array hasta que se llene o se completen todos los elementos del árbol.
+
+### Funciones auxiliares:
+
+1. **funcion_insertar_recursiva**: Función auxiliar utilizada por `abb_insertar` para insertar recursivamente un elemento en el árbol.
+
+2. **funcion_aux_buscar**: Función auxiliar utilizada por `abb_buscar` para buscar recursivamente un elemento en el árbol.
+
+3. **buscar_nodo_y_padre**: Función auxiliar utilizada por `abb_quitar` para encontrar el nodo a eliminar y su padre.
+
+4. **eliminar_nodo**: Función auxiliar utilizada por `abb_quitar` para eliminar un nodo del árbol.
+
+5. **funcion_aux_destruir**: Función auxiliar utilizada por `abb_destruir` para destruir recursivamente todos los nodos del árbol.
+
+6. **funcion_aux_destruir_todo**: Función auxiliar utilizada por `abb_destruir_todo` para destruir recursivamente todos los nodos del árbol y aplicar una función destructora a cada elemento.
+
+7. **Funciones de recorrido (inorden, preorden, postorden)**: Funciones auxiliares utilizadas por `abb_con_cada_elemento` y `abb_recorrer` para recorrer el árbol en el orden especificado.
+
+Durante el desarrollo del trabajo práctico, encontré algunos desafíos al implementar la función de inserción en el vector. Inicialmente, mi idea era reutilizar la función iteradora que ya tenía implementada para recorrer el árbol binario de búsqueda. Sin embargo, me encontré con varios errores al intentar adaptar esta función para la inserción en el vector. Después de intentar resolver estos problemas durante un tiempo, decidí optar por una solución más directa, creando tres funciones adicionales específicamente para la inserción en el vector. Aunque esta solución funcionó, no considero que sea la más óptima, ya que idealmente deberíamos buscar reutilizar el iterador interno del árbol para maximizar la eficiencia y la claridad del código.
+
+Otro desafío que enfrenté fue al implementar la función para eliminar un nodo del árbol cuando el elemento a eliminar era un puntero nulo. Originalmente, intenté reutilizar la función abb_buscar para determinar si el elemento estaba presente en el árbol antes de eliminarlo. Sin embargo, esto resultó problemático, ya que la función abb_buscar no maneja explícitamente el caso del elemento nulo. Para resolver este problema, tuve que crear una función booleana adicional que verificara si el elemento estaba presente en el árbol antes de intentar eliminarlo. Aunque esta solución funcionó, creo que sería más elegante si pudiéramos reutilizar la función existente abb_buscar y manejar correctamente el caso del puntero nulo dentro de esa función.
+
+En resumen, aunque enfrenté algunos desafíos al implementar estas funciones, pude encontrar soluciones alternativas que permitieron que mi programa funcionara correctamente. Sin embargo, reconozco que hay margen para mejorar la eficiencia y la claridad del código, especialmente buscando formas de reutilizar funciones existentes en lugar de crear nuevas.
 
 ## Respuestas a las preguntas teóricas
 
