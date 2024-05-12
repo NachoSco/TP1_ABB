@@ -5,18 +5,19 @@
 - Para compilar:
 
 ```bash
-línea de compilación
+gcc -std=c99 -Wall -Wconversion -Wtype-limits -pedantic -Werror -O2 -g src/*.c abb.c -o abb.c -I./include
+
 ```
 
 - Para ejecutar:
 
 ```bash
-línea de ejecución
+./abb.c
 ```
 
 - Para ejecutar con valgrind:
 ```bash
-línea con valgrind
+valgrind --leak-check=full ./abb.c
 ```
 ---
 ##  Funcionamiento
